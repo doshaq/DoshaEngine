@@ -1,9 +1,9 @@
 package engine.entities
 
-import engine.models.TexturedModel
+import engine.models.TextureModel
 import org.lwjgl.util.vector.Vector3f
 
-class Entity (val model:TexturedModel, val position:Vector3f, var rotX:Float, var rotY:Float, var rotZ:Float,var scale:Float ){
+class Entity (val model:TextureModel, val position:Vector3f, var rotX:Float, var rotY:Float, var rotZ:Float, var scale:Float ){
 
 
 

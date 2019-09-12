@@ -31,6 +31,7 @@ class Renderer(shader: StaticShader) {
 
     fun prepare() {
         GL11.glEnable(GL11.GL_DEPTH_TEST)
+        GL11.glCullFace(GL11.GL_BACK)
         GL11.glClear(GL11.GL_COLOR_BUFFER_BIT or GL11.GL_DEPTH_BUFFER_BIT)
         GL11.glClearColor(0f, 0.3f, 0.0f, 1f)
     }
@@ -45,6 +46,8 @@ class Renderer(shader: StaticShader) {
         val transformationMatrix = createTransformationMatrix(entity.position,
                 entity.rotX, entity.rotY, entity.rotZ, entity.scale)
         shader.loadTransformationMatrix(transformationMatrix)
+        val texture = model.modelTexture
+        shader.loadShineVariables(texture.shineDamper,texture.reflectivity)
         GL13.glActiveTexture(GL13.GL_TEXTURE0)
         GL11.glBindTexture(GL11.GL_TEXTURE_2D, model.modelTexture.textureID)
         GL11.glDrawElements(GL11.GL_TRIANGLES, rawModel.vertexCount, GL11.GL_UNSIGNED_INT, 0)

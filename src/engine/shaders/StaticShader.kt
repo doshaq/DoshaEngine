@@ -9,10 +9,12 @@ import org.lwjgl.util.vector.Matrix4f
 class StaticShader : ShaderProgram(VERTEX_FILE, FRAGMENT_FILE) {
 
     private var locationTransformationMatrix: Int = 0
-    private var locationProjectionmatrix: Int = 0
+    private var locationProjectionMatrix: Int = 0
     private var locationViewMatrix: Int = 0
     private var locationLightPosition: Int = 0
     private var locationLightColor: Int = 0
+    private var locationShineDamper: Int = 0
+    private var locationReflectivity: Int = 0
 
     override fun bindAttributes() {
         super.bindAttribute(0, "position")
@@ -22,11 +24,18 @@ class StaticShader : ShaderProgram(VERTEX_FILE, FRAGMENT_FILE) {
 
     override fun getAllUniformLocations() {
         locationTransformationMatrix = super.getUniformLocation("transformationMatrix")
-        locationProjectionmatrix = super.getUniformLocation("projectionMatrix")
+        locationProjectionMatrix = super.getUniformLocation("projectionMatrix")
         locationViewMatrix = super.getUniformLocation("viewMatrix")
         locationLightPosition = super.getUniformLocation("lightPosition")
         locationLightColor = super.getUniformLocation("lightColor")
+        locationShineDamper = super.getUniformLocation("shineDamper")
+        locationShineDamper = super.getUniformLocation("reflectivity")
 
+    }
+
+    fun loadShineVariables(damper:Float,reflectivity:Float){
+       super.loadFloat(locationShineDamper,damper)
+       super.loadFloat(locationReflectivity,reflectivity)
     }
 
     fun loadTransformationMatrix(matrix: Matrix4f) {
@@ -39,7 +48,7 @@ class StaticShader : ShaderProgram(VERTEX_FILE, FRAGMENT_FILE) {
     }
 
     fun loadProjectionMatrix(projection: Matrix4f) {
-        super.loadMatrix(locationProjectionmatrix, projection)
+        super.loadMatrix(locationProjectionMatrix, projection)
     }
     fun loadLight(light:Light){
         super.loadVector(locationLightPosition,light.position)
