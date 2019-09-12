@@ -2,26 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d423686f-886e-4a40-be9a-03c0cd771053" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BeastHeart/demo/MainGameLoop.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BeastHeart/demo/MainGameLoop.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BeastHeart/engine/entities/Entity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BeastHeart/engine/entities/Entity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BeastHeart/engine/models/TexturedModel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BeastHeart/engine/renderer/Renderer$Companion.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BeastHeart/engine/renderer/Renderer$Companion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BeastHeart/engine/renderer/Renderer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BeastHeart/engine/renderer/Renderer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BeastHeart/engine/shaders/StaticShader$Companion.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BeastHeart/engine/shaders/StaticShader$Companion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BeastHeart/engine/shaders/StaticShader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BeastHeart/engine/shaders/StaticShader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BeastHeart/engine/textures/ModelTexture.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BeastHeart/engine/textures/ModelTexture.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BeastHeart/shaders/fragmentShader.glsl" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BeastHeart/shaders/fragmentShader.glsl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BeastHeart/shaders/vertexShader.glsl" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BeastHeart/shaders/vertexShader.glsl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/shaders/fragmentShader.glsl" beforeDir="false" afterPath="$PROJECT_DIR$/res/shaders/fragmentShader.glsl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/shaders/vertexShader.glsl" beforeDir="false" afterPath="$PROJECT_DIR$/res/shaders/vertexShader.glsl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/demo/MainGameLoop.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/demo/MainGameLoop.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/engine/entities/Entity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/engine/entities/Entity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/engine/models/TexturedModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/engine/models/TextureModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/engine/renderer/RenderManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/engine/renderer/RenderManager.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/engine/renderer/Renderer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/engine/renderer/Renderer.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/engine/shaders/StaticShader.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/engine/shaders/StaticShader.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/engine/textures/ModelTexture.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/engine/textures/ModelTexture.kt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -52,8 +36,8 @@
       <list>
         <option value="Class" />
         <option value="GLSL Shader" />
-        <option value="Kotlin File" />
         <option value="Kotlin Class" />
+        <option value="Kotlin File" />
       </list>
     </option>
   </component>
@@ -69,6 +53,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/res/models" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -148,7 +133,7 @@
       <option name="presentableId" value="Default" />
       <updated>1568135837398</updated>
       <workItem from="1568135838508" duration="5632000" />
-      <workItem from="1568290156555" duration="25163000" />
+      <workItem from="1568290156555" duration="27266000" />
     </task>
     <servers />
   </component>

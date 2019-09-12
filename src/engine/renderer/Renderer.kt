@@ -1,6 +1,7 @@
 package engine.renderer
 
 import engine.entities.Entity
+import engine.models.TextureModel
 import engine.shaders.StaticShader
 import engine.toolbox.createTransformationMatrix
 import org.lwjgl.opengl.GL11
@@ -18,7 +19,7 @@ import org.lwjgl.util.vector.Matrix4f
  *
  * @author Karl
  */
-class Renderer(shader: StaticShader) {
+class Renderer(val shader: StaticShader) {
 
     private var projectionMatrix: Matrix4f? = null
 
@@ -36,27 +37,42 @@ class Renderer(shader: StaticShader) {
         GL11.glClearColor(0f, 0.3f, 0.0f, 1f)
     }
 
-    fun render(entity: Entity, shader: StaticShader) {
-        val model = entity.model
-        val rawModel = model.rawModel
-        GL30.glBindVertexArray(rawModel.vaoID)
-        GL20.glEnableVertexAttribArray(0)
-        GL20.glEnableVertexAttribArray(1)
-        GL20.glEnableVertexAttribArray(2)
+    fun render(entities:HashMap<TextureModel,List<Entity>>){
+        for (model in entities.keys){
+            prepareTextureModel(model)
+            val batch:List<Entity> = entities[model]!!
+            for (entity in batch){
+                prepareInstance(entity)
+                GL11.glDrawElements(GL11.GL_TRIANGLES, model.rawModel.vertexCount, GL11.GL_UNSIGNED_INT, 0)
+
+            }
+            unbindTextureModel()
+
+        }
+    }
+
+    fun prepareInstance(entity: Entity){
         val transformationMatrix = createTransformationMatrix(entity.position,
                 entity.rotX, entity.rotY, entity.rotZ, entity.scale)
         shader.loadTransformationMatrix(transformationMatrix)
-        val texture = model.modelTexture
-        shader.loadShineVariables(texture.shineDamper,texture.reflectivity)
-        GL13.glActiveTexture(GL13.GL_TEXTURE0)
-        GL11.glBindTexture(GL11.GL_TEXTURE_2D, model.modelTexture.textureID)
-        GL11.glDrawElements(GL11.GL_TRIANGLES, rawModel.vertexCount, GL11.GL_UNSIGNED_INT, 0)
+    }
+    fun unbindTextureModel(){
         GL20.glDisableVertexAttribArray(0)
         GL20.glDisableVertexAttribArray(1)
         GL20.glDisableVertexAttribArray(2)
         GL30.glBindVertexArray(0)
     }
-
+    fun prepareTextureModel(textureModel: TextureModel){
+        val rawModel = textureModel.rawModel
+        GL30.glBindVertexArray(rawModel.vaoID)
+        GL20.glEnableVertexAttribArray(0)
+        GL20.glEnableVertexAttribArray(1)
+        GL20.glEnableVertexAttribArray(2)
+        val texture = textureModel.modelTexture
+        shader.loadShineVariables(texture.shineDamper,texture.reflectivity)
+        GL13.glActiveTexture(GL13.GL_TEXTURE0)
+        GL11.glBindTexture(GL11.GL_TEXTURE_2D, textureModel.modelTexture.textureID)
+    }
     private fun createProjectionMatrix() {
         val aspectRatio = Display.getWidth().toFloat() / Display.getHeight().toFloat()
         val y_scale = (1f / Math.tan(Math.toRadians((FOV / 2f).toDouble())) * aspectRatio).toFloat()
