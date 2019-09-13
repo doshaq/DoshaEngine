@@ -10,11 +10,15 @@ import engine.terrains.Terrain
 import org.lwjgl.opengl.Display
 import org.lwjgl.opengl.GL11
 import org.lwjgl.util.vector.Matrix4f
+import org.lwjgl.util.vector.Vector3f
 import java.util.ArrayList
 import java.util.HashMap
 import kotlin.math.tan
 
 
+private val RED = 0.2f
+private val GREEN = 0.5f
+private val BLUE = 0.6f
 class RenderManager{
 
     companion object{
@@ -52,11 +56,13 @@ class RenderManager{
     fun render(sun: Light, camera: Camera) {
         prepare()
         shader.start()
+        shader.loadSkyColour(RED, BLUE, GREEN)
         shader.loadLight(sun)
         shader.loadViewMatrix(camera)
         renderer.render(entities)
         shader.stop()
         terrainShader.start()
+        terrainShader.loadSkyColour(RED, BLUE, GREEN)
         terrainShader.loadLight(sun)
         terrainShader.loadViewMatrix(camera)
         terrainRenderer.render(terrains)
@@ -89,7 +95,7 @@ class RenderManager{
     fun prepare() {
         GL11.glEnable(GL11.GL_DEPTH_TEST)
         GL11.glClear(GL11.GL_COLOR_BUFFER_BIT or GL11.GL_DEPTH_BUFFER_BIT)
-        GL11.glClearColor(0.49f, 89f, 0.98f, 1f)
+        GL11.glClearColor(RED,BLUE, GREEN, 1f)
     }
 
     private fun createProjectionMatrix() {

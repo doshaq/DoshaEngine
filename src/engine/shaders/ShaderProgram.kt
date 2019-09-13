@@ -101,7 +101,7 @@ abstract class ShaderProgram(vertexFile: String, fragmentFile: String) {
             GL20.glCompileShader(shaderID)
             if(GL20.glGetShaderi(shaderID, GL20.GL_COMPILE_STATUS )== GL11.GL_FALSE){
                 println(GL20.glGetShaderInfoLog(shaderID, 500));
-                System.err.println("Could not compile shader!");
+                System.err.println("Could not compile the shader : $file!");
                 exitProcess(-1);
             }
             return shaderID
