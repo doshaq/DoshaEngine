@@ -99,10 +99,10 @@ abstract class ShaderProgram(vertexFile: String, fragmentFile: String) {
             val shaderID = GL20.glCreateShader(type)
             GL20.glShaderSource(shaderID, shaderSource)
             GL20.glCompileShader(shaderID)
-            if (GL20.glGetShader(shaderID, GL20.GL_COMPILE_STATUS) == GL11.GL_FALSE) {
-                println(GL20.glGetShaderInfoLog(shaderID, 500))
-                System.err.println("Could not compile shader!")
-                exitProcess(-1)
+            if(GL20.glGetShaderi(shaderID, GL20.GL_COMPILE_STATUS )== GL11.GL_FALSE){
+                println(GL20.glGetShaderInfoLog(shaderID, 500));
+                System.err.println("Could not compile shader!");
+                exitProcess(-1);
             }
             return shaderID
         }

@@ -6,7 +6,7 @@ package engine.models
  *
  * @author Karl
  */
-class RawModel(
+class Mesh(
         /**
          * @return The ID of the VAO which contains the data about all the geometry
          * of this model.

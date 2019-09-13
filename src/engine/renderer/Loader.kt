@@ -1,6 +1,6 @@
 package engine.renderer
 
-import engine.models.RawModel
+import engine.models.Mesh
 import java.nio.FloatBuffer
 import java.util.ArrayList
 import org.lwjgl.BufferUtils
@@ -12,7 +12,7 @@ import org.newdawn.slick.opengl.Texture
 import org.newdawn.slick.opengl.TextureLoader
 import java.io.FileInputStream
 import java.nio.IntBuffer
-
+import kotlin.system.exitProcess
 
 
 /**
@@ -45,14 +45,14 @@ class Loader {
      *             it contains the texture location reference
      * @return The loaded model.
      */
-    fun loadToVAO(positions: FloatArray, textureCoords: FloatArray, indices: IntArray,normals:FloatArray): RawModel {
+    fun loadToVAO(positions: FloatArray, textureCoords: FloatArray, indices: IntArray,normals:FloatArray): Mesh {
         val vaoID = createVAO()
         bindIndicesBuffer(indices)
         storeDataInAttributeList(0, 3, positions)
         storeDataInAttributeList(1, 2, textureCoords)
         storeDataInAttributeList(2, 3, normals)
         unbindVAO()
-        return RawModel(vaoID, indices.size)
+        return Mesh(vaoID, indices.size)
     }
     /**
      * load texture to the engine memory
@@ -61,15 +61,15 @@ class Loader {
      *              - the texture file that you want to load
      *
      */
-    fun loadTexture(fileName: String): Int {
+    fun loadTexture(fileName: String,format:String = "png"): Int {
         var texture: Texture? = null
         try {
-            texture = TextureLoader.getTexture("PNG",
-                    FileInputStream("res/images/$fileName.png"))
+            texture = TextureLoader.getTexture(format.toLowerCase(),
+                    FileInputStream("res/images/$fileName.${format.toLowerCase()}"))
         } catch (e: Exception) {
             e.printStackTrace()
-            System.err.println("Tried to load texture $fileName.png , didn't work")
-            System.exit(-1)
+            System.err.println("Tried to load texture $fileName.${format.toLowerCase()} , didn't work")
+            exitProcess(-1)
         }
 
         textures.add(texture!!.textureID)

@@ -5,8 +5,7 @@ import engine.entities.Light
 import engine.toolbox.createViewMatrix
 import org.lwjgl.util.vector.Matrix4f
 
-
-class StaticShader : ShaderProgram(VERTEX_FILE, FRAGMENT_FILE) {
+class TerrainShader :ShaderProgram(VERTEX_FILE, FRAGMENT_FILE){
 
     private var locationTransformationMatrix: Int = 0
     private var locationProjectionMatrix: Int = 0
@@ -15,7 +14,6 @@ class StaticShader : ShaderProgram(VERTEX_FILE, FRAGMENT_FILE) {
     private var locationLightColor: Int = 0
     private var locationShineDamper: Int = 0
     private var locationReflectivity: Int = 0
-    private var locationUseFakeLighting: Int = 0
 
     override fun bindAttributes() {
         super.bindAttribute(0, "position")
@@ -31,17 +29,14 @@ class StaticShader : ShaderProgram(VERTEX_FILE, FRAGMENT_FILE) {
         locationLightColor = super.getUniformLocation("lightColour");
         locationShineDamper = super.getUniformLocation("shineDamper");
         locationReflectivity = super.getUniformLocation("reflectivity");
-        locationUseFakeLighting = super.getUniformLocation("useFakeLighting");
 
     }
 
     fun loadShineVariables(damper:Float,reflectivity:Float){
-       super.loadFloat(locationShineDamper,damper)
-       super.loadFloat(locationReflectivity,reflectivity)
+        super.loadFloat(locationShineDamper,damper)
+        super.loadFloat(locationReflectivity,reflectivity)
     }
-    fun loadFakeLighting(useFake:Boolean){
-        super.loadBoolean(locationUseFakeLighting,useFake)
-    }
+
     fun loadTransformationMatrix(matrix: Matrix4f) {
         super.loadMatrix(locationTransformationMatrix, matrix)
     }
@@ -54,15 +49,15 @@ class StaticShader : ShaderProgram(VERTEX_FILE, FRAGMENT_FILE) {
     fun loadProjectionMatrix(projection: Matrix4f) {
         super.loadMatrix(locationProjectionMatrix, projection)
     }
-    fun loadLight(light:Light){
+    fun loadLight(light: Light){
         super.loadVector(locationLightPosition,light.position)
         super.loadVector(locationLightColor,light.color)
 
     }
     companion object {
 
-        private val VERTEX_FILE = "res/shaders/vertexShader.glsl"
-        private val FRAGMENT_FILE = "res/shaders/fragmentShader.glsl"
+        private val VERTEX_FILE = "res/shaders/terrainVertexShader.glsl"
+        private val FRAGMENT_FILE = "res/shaders/terrainFragmentShader.glsl"
     }
 
 

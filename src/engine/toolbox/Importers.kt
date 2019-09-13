@@ -1,7 +1,6 @@
 package engine.toolbox
 
-import com.sun.xml.internal.fastinfoset.util.StringArray
-import engine.models.RawModel
+import engine.models.Mesh
 import engine.renderer.Loader
 import org.lwjgl.util.vector.Vector2f
 import org.lwjgl.util.vector.Vector3f
@@ -12,7 +11,7 @@ import java.io.FileReader
 import java.lang.Exception
 
 
-fun objImporter(fileName:String,loader:Loader):RawModel{
+fun objImporter(fileName:String,loader:Loader):Mesh{
     var fr:FileReader? = null
     try{
         fr = FileReader(File("res/models/$fileName.obj"))
@@ -30,8 +29,7 @@ fun objImporter(fileName:String,loader:Loader):RawModel{
     val indicesArray: IntArray
     try{
         for(line in reader.lines()){
-            val currentLine = line.split(" ")
-
+            val currentLine = line.split("\\s+".toRegex())
             if(line.startsWith("v ")){
                 val vertex = Vector3f(currentLine[1].toFloat(),currentLine[2].toFloat(),currentLine[3].toFloat())
                 vertices.add(vertex)
