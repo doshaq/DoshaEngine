@@ -1,40 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d423686f-886e-4a40-be9a-03c0cd771053" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/engine/entities/Atom.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BeastHeart/META-INF/BeastHeart.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BeastHeart/META-INF/BeastHeart.kotlin_module" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BeastHeart/demo/MainGameLoop.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BeastHeart/demo/MainGameLoop.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BeastHeart/engine/entities/Camera.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BeastHeart/engine/entities/Camera.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BeastHeart/engine/entities/Entity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BeastHeart/engine/entities/Entity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BeastHeart/engine/entities/Light.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BeastHeart/engine/entities/Light.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BeastHeart/engine/models/Mesh.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BeastHeart/engine/models/Mesh.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BeastHeart/engine/models/Model.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BeastHeart/engine/models/Model.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BeastHeart/engine/renderer/DisplayManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BeastHeart/engine/renderer/DisplayManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BeastHeart/engine/renderer/EntityRenderer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BeastHeart/engine/renderer/EntityRenderer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BeastHeart/engine/renderer/Loader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BeastHeart/engine/renderer/Loader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BeastHeart/engine/renderer/RenderManager$Companion.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BeastHeart/engine/renderer/RenderManager$Companion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BeastHeart/engine/renderer/RenderManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BeastHeart/engine/renderer/RenderManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BeastHeart/engine/renderer/RenderManagerKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BeastHeart/engine/renderer/RenderManagerKt.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BeastHeart/engine/renderer/TerrainRenderer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BeastHeart/engine/renderer/TerrainRenderer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BeastHeart/engine/shaders/ShaderProgram$Companion.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BeastHeart/engine/shaders/ShaderProgram$Companion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BeastHeart/engine/shaders/ShaderProgram.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BeastHeart/engine/shaders/ShaderProgram.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BeastHeart/engine/shaders/StaticShader$Companion.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BeastHeart/engine/shaders/StaticShader$Companion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BeastHeart/engine/shaders/StaticShader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BeastHeart/engine/shaders/StaticShader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BeastHeart/engine/shaders/TerrainShader$Companion.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BeastHeart/engine/shaders/TerrainShader$Companion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BeastHeart/engine/shaders/TerrainShader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BeastHeart/engine/shaders/TerrainShader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BeastHeart/engine/terrains/Terrain.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BeastHeart/engine/terrains/Terrain.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BeastHeart/engine/terrains/TerrainKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BeastHeart/engine/terrains/TerrainKt.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BeastHeart/engine/textures/Texture.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BeastHeart/engine/textures/Texture.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BeastHeart/engine/toolbox/ImportersKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BeastHeart/engine/toolbox/ImportersKt.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BeastHeart/engine/toolbox/MathsKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BeastHeart/engine/toolbox/MathsKt.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/demo/MainGameLoop.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/demo/MainGameLoop.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/engine/entities/Camera.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/engine/entities/Camera.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/engine/entities/Entity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/engine/entities/Entity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/engine/renderer/EntityRenderer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/engine/renderer/EntityRenderer.kt" afterDir="false" />
-    </list>
+    <list default="true" id="d423686f-886e-4a40-be9a-03c0cd771053" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,8 +141,16 @@
       <updated>1568135837398</updated>
       <workItem from="1568135838508" duration="5632000" />
       <workItem from="1568290156555" duration="42139000" />
-      <workItem from="1584454050429" duration="1420000" />
+      <workItem from="1584454050429" duration="1695000" />
     </task>
+    <task id="LOCAL-00001" summary="resetting project to a working commit">
+      <created>1584455682144</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1584455682145</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -195,6 +170,9 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="resetting project to a working commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="resetting project to a working commit" />
   </component>
 </project>
