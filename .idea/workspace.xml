@@ -2,29 +2,38 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d423686f-886e-4a40-be9a-03c0cd771053" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/engine/entities/Atom.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/BeastHeart/META-INF/BeastHeart.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BeastHeart/META-INF/BeastHeart.kotlin_module" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/BeastHeart/demo/MainGameLoop.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BeastHeart/demo/MainGameLoop.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BeastHeart/engine/entities/Camera.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BeastHeart/engine/entities/Camera.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BeastHeart/engine/entities/Entity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BeastHeart/engine/entities/Entity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BeastHeart/engine/entities/Light.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BeastHeart/engine/entities/Light.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BeastHeart/engine/models/Mesh.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BeastHeart/engine/models/Mesh.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BeastHeart/engine/models/Model.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BeastHeart/engine/models/Model.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BeastHeart/engine/renderer/DisplayManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BeastHeart/engine/renderer/DisplayManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BeastHeart/engine/renderer/EntityRenderer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BeastHeart/engine/renderer/EntityRenderer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/BeastHeart/engine/renderer/Loader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BeastHeart/engine/renderer/Loader.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/BeastHeart/engine/renderer/RenderManager$Companion.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BeastHeart/engine/renderer/RenderManager$Companion.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/BeastHeart/engine/renderer/RenderManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BeastHeart/engine/renderer/RenderManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BeastHeart/engine/renderer/RenderManagerKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BeastHeart/engine/renderer/RenderManagerKt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BeastHeart/engine/renderer/TerrainRenderer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BeastHeart/engine/renderer/TerrainRenderer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/BeastHeart/engine/shaders/ShaderProgram$Companion.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BeastHeart/engine/shaders/ShaderProgram$Companion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BeastHeart/engine/shaders/ShaderProgram.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BeastHeart/engine/shaders/ShaderProgram.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/BeastHeart/engine/shaders/StaticShader$Companion.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BeastHeart/engine/shaders/StaticShader$Companion.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/BeastHeart/engine/shaders/StaticShader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BeastHeart/engine/shaders/StaticShader.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/BeastHeart/engine/shaders/TerrainShader$Companion.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BeastHeart/engine/shaders/TerrainShader$Companion.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/BeastHeart/engine/shaders/TerrainShader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BeastHeart/engine/shaders/TerrainShader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BeastHeart/shaders/fragmentShader.glsl" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BeastHeart/shaders/fragmentShader.glsl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BeastHeart/shaders/terrainFragmentShader.glsl" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BeastHeart/shaders/terrainFragmentShader.glsl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BeastHeart/shaders/terrainVertexShader.glsl" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BeastHeart/shaders/terrainVertexShader.glsl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BeastHeart/shaders/vertexShader.glsl" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BeastHeart/shaders/vertexShader.glsl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/shaders/fragmentShader.glsl" beforeDir="false" afterPath="$PROJECT_DIR$/res/shaders/fragmentShader.glsl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/shaders/terrainFragmentShader.glsl" beforeDir="false" afterPath="$PROJECT_DIR$/res/shaders/terrainFragmentShader.glsl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/shaders/terrainVertexShader.glsl" beforeDir="false" afterPath="$PROJECT_DIR$/res/shaders/terrainVertexShader.glsl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/shaders/vertexShader.glsl" beforeDir="false" afterPath="$PROJECT_DIR$/res/shaders/vertexShader.glsl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/engine/renderer/RenderManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/engine/renderer/RenderManager.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/engine/shaders/ShaderProgram.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/engine/shaders/ShaderProgram.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/engine/shaders/StaticShader.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/engine/shaders/StaticShader.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/engine/shaders/TerrainShader.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/engine/shaders/TerrainShader.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BeastHeart/engine/terrains/Terrain.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BeastHeart/engine/terrains/Terrain.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BeastHeart/engine/terrains/TerrainKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BeastHeart/engine/terrains/TerrainKt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BeastHeart/engine/textures/Texture.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BeastHeart/engine/textures/Texture.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BeastHeart/engine/toolbox/ImportersKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BeastHeart/engine/toolbox/ImportersKt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BeastHeart/engine/toolbox/MathsKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BeastHeart/engine/toolbox/MathsKt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/demo/MainGameLoop.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/demo/MainGameLoop.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/engine/entities/Camera.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/engine/entities/Camera.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/engine/entities/Entity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/engine/entities/Entity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/engine/renderer/EntityRenderer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/engine/renderer/EntityRenderer.kt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -55,13 +64,19 @@
       <list>
         <option value="Class" />
         <option value="GLSL Shader" />
-        <option value="Kotlin File" />
         <option value="Kotlin Class" />
+        <option value="Kotlin File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/engine/renderer/EntityRenderer.kt" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="lSChCbfi" />
   </component>
   <component name="ProjectId" id="1QefAHtp4kxxnXaN5pGI4qmOkCT" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -76,7 +91,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
@@ -159,6 +174,7 @@
       <updated>1568135837398</updated>
       <workItem from="1568135838508" duration="5632000" />
       <workItem from="1568290156555" duration="42139000" />
+      <workItem from="1584454050429" duration="1420000" />
     </task>
     <servers />
   </component>
@@ -170,7 +186,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

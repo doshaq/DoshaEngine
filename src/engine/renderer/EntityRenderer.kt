@@ -20,7 +20,7 @@ import org.lwjgl.util.vector.Matrix4f
  *
  * @author Karl
  */
-class EntityRenderer(val shader: StaticShader,val projectionMatrix:Matrix4f) {
+class EntityRenderer(private val shader: StaticShader, private val projectionMatrix:Matrix4f) {
 
     init {
         shader.start()
@@ -67,7 +67,7 @@ class EntityRenderer(val shader: StaticShader,val projectionMatrix:Matrix4f) {
 
     private fun prepareInstance(entity: Entity) {
         val transformationMatrix = createTransformationMatrix(entity.position,
-                entity.rotX, entity.rotY, entity.rotZ, entity.scale)
+                entity.rotation.x, entity.rotation.y, entity.rotation.z, entity.scale)
         shader.loadTransformationMatrix(transformationMatrix)
     }
 }
