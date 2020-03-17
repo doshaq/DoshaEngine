@@ -8,6 +8,8 @@ import engine.renderer.DisplayManager
 import engine.renderer.Loader
 import engine.renderer.RenderManager
 import engine.terrains.Terrain
+import engine.textures.TerrainTexture
+import engine.textures.TerrainTexturePack
 import engine.textures.Texture
 import engine.toolbox.objImporter
 import org.lwjgl.opengl.Display
@@ -17,8 +19,6 @@ import kotlin.collections.ArrayList
 
 
 object MainGameLoop {
-
-
     @JvmStatic
     fun main(args: Array<String>) {
 
@@ -36,21 +36,22 @@ object MainGameLoop {
         for(i in 0..500){
             entities.add(Entity(bush,Vector3f(random.nextFloat()* 800f - 400f,0f,random.nextFloat() * -600), Vector3f(0f,0f,0f),0.09f))
         }
+        /***************************************Terrain stuff********************************************************/
+        val terrainBackgroundTexture = TerrainTexture(loader.loadTexture("grass"))
+        val terrainrTexture = TerrainTexture(loader.loadTexture("dirt"))
+        val terraingTexture = TerrainTexture(loader.loadTexture("grass"))
+        val terrainbTexture = TerrainTexture(loader.loadTexture("flowers"))
+        val terrainBlendMapTexture = TerrainTexture(loader.loadTexture("blendmap"))
+        val terrain = Terrain(-0.5f,-0.5f,
+                TerrainTexturePack(terrainBackgroundTexture,terrainrTexture,terraingTexture,terrainbTexture),
+                terrainBlendMapTexture,
+                loader)
+        /***************************************Terrain stuff********************************************************/
 
-        val terrain = Terrain(-0.5f,-0.5f,Texture(loader.loadTexture("grass")),loader)
-        val terrain2 = Terrain(0.5f,-0.5f,Texture(loader.loadTexture("grass")),loader)
-        val terrain3 = Terrain(0.5f,-1f,Texture(loader.loadTexture("grass")),loader)
-        val terrain4 = Terrain(-1f,-0.5f,Texture(loader.loadTexture("grass")),loader)
-        val terrain5 = Terrain(-1f,-1f,Texture(loader.loadTexture("grass")),loader)
-        val terrain6 = Terrain(-0.5f,-1f,Texture(loader.loadTexture("grass")),loader)
         while (!Display.isCloseRequested()) {
             camera.move()
             renderManager.processTerrain(terrain)
-            renderManager.processTerrain(terrain2)
-            renderManager.processTerrain(terrain3)
-            renderManager.processTerrain(terrain4)
-            renderManager.processTerrain(terrain5)
-            renderManager.processTerrain(terrain6)
+
 
             for (entity in entities){
                 renderManager.processEntity(entity)

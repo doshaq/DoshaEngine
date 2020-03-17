@@ -16,7 +16,11 @@ class TerrainShader :ShaderProgram(VERTEX_FILE, FRAGMENT_FILE){
     private var locationShineDamper: Int = 0
     private var locationReflectivity: Int = 0
     private var locationSkyColor: Int = 0
-
+    private var locationBackgroundTexture = 0
+    private var locationrTexture = 0
+    private var locationbTexture = 0
+    private var locationgTexture = 0
+    private var locationBlendTexture = 0
     override fun bindAttributes() {
         super.bindAttribute(0, "position")
         super.bindAttribute(1, "textureCoordinates")
@@ -31,10 +35,21 @@ class TerrainShader :ShaderProgram(VERTEX_FILE, FRAGMENT_FILE){
         locationLightColor = super.getUniformLocation("lightColor")
         locationShineDamper = super.getUniformLocation("shineDamper")
         locationReflectivity = super.getUniformLocation("reflectivity")
+        locationBackgroundTexture = super.getUniformLocation("skyColor")
         locationSkyColor = super.getUniformLocation("skyColor")
-
+        locationrTexture= super.getUniformLocation("rTexture")
+        locationgTexture = super.getUniformLocation("gTexture")
+        locationbTexture = super.getUniformLocation("bTexture")
+        locationBlendTexture = super.getUniformLocation("blendMapTexture")
     }
-    fun loadSkyColour(r:Float,g:Float,b:Float){
+    public fun connectTextureUnits(){
+        super.loadInt(locationBackgroundTexture,0)
+        super.loadInt(locationrTexture,1)
+        super.loadInt(locationgTexture,2)
+        super.loadInt(locationbTexture,3)
+        super.loadInt(locationBlendTexture,4)
+    }
+    fun loadSkyColor(r:Float, g:Float, b:Float){
         super.loadVector(locationSkyColor, Vector3f(r,g,b))
     }
     fun loadShineVariables(damper:Float,reflectivity:Float){

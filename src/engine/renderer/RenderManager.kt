@@ -10,7 +10,6 @@ import engine.terrains.Terrain
 import org.lwjgl.opengl.Display
 import org.lwjgl.opengl.GL11
 import org.lwjgl.util.vector.Matrix4f
-import org.lwjgl.util.vector.Vector3f
 import java.util.ArrayList
 import java.util.HashMap
 import kotlin.math.tan
@@ -62,7 +61,7 @@ class RenderManager{
         renderer.render(entities)
         shader.stop()
         terrainShader.start()
-        terrainShader.loadSkyColour(RED, BLUE, GREEN)
+        terrainShader.loadSkyColor(RED, BLUE, GREEN)
         terrainShader.loadLight(sun)
         terrainShader.loadViewMatrix(camera)
         terrainRenderer.render(terrains)

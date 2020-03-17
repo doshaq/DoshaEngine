@@ -2,6 +2,8 @@ package engine.terrains
 
 import engine.models.Mesh
 import engine.renderer.Loader
+import engine.textures.TerrainTexture
+import engine.textures.TerrainTexturePack
 import engine.textures.Texture
 
 
@@ -12,7 +14,7 @@ import engine.textures.Texture
 const val  SIZE = 800f
 const val VERTEX_COUNT:Int = 128
 
-class Terrain (val gridX:Float, gridZ:Float, val texture:Texture, val loader: Loader){
+class Terrain (val gridX:Float, gridZ:Float, val texture:TerrainTexturePack,val textureMap:TerrainTexture, val loader: Loader){
     private val SIZE = 800f
     private val VERTEX_COUNT = 128
 

@@ -60,7 +60,10 @@ abstract class ShaderProgram(vertexFile: String, fragmentFile: String) {
     protected fun loadFloat(location: Int, value: Float) {
         GL20.glUniform1f(location, value)
     }
+    protected fun loadInt(location:Int,value:Int){
+        GL20.glUniform1i(location,value)
 
+    }
     protected fun loadVector(location: Int, vector: Vector3f) {
         GL20.glUniform3f(location, vector.x, vector.y, vector.z)
     }

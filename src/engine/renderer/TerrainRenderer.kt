@@ -19,6 +19,7 @@ class TerrainRenderer(private val shader: TerrainShader = TerrainShader(), proje
     init {
         shader.start()
         shader.loadProjectionMatrix(projectionMatrix4f)
+        shader.connectTextureUnits()
         shader.stop()
     }
 
@@ -38,12 +39,22 @@ class TerrainRenderer(private val shader: TerrainShader = TerrainShader(), proje
         GL20.glEnableVertexAttribArray(0)
         GL20.glEnableVertexAttribArray(1)
         GL20.glEnableVertexAttribArray(2)
-        val texture = terrain.texture
-        shader.loadShineVariables(texture.shineDamper, texture.reflectivity)
-        GL13.glActiveTexture(GL13.GL_TEXTURE0)
-        GL11.glBindTexture(GL11.GL_TEXTURE_2D, texture.textureID)
-    }
+        bindTextures(terrain)
+        shader.loadShineVariables(1f,0f)
 
+    }
+    private fun bindTextures(terrain: Terrain){
+        GL13.glActiveTexture(GL13.GL_TEXTURE0)
+        GL11.glBindTexture(GL11.GL_TEXTURE_2D,terrain.texture.backgroundTexture.textureId)
+        GL13.glActiveTexture(GL13.GL_TEXTURE1)
+        GL11.glBindTexture(GL11.GL_TEXTURE_2D,terrain.texture.rTexture.textureId)
+        GL13.glActiveTexture(GL13.GL_TEXTURE2)
+        GL11.glBindTexture(GL11.GL_TEXTURE_2D,terrain.texture.gTexture.textureId)
+        GL13.glActiveTexture(GL13.GL_TEXTURE3)
+        GL11.glBindTexture(GL11.GL_TEXTURE_2D,terrain.texture.bTexture.textureId)
+        GL13.glActiveTexture(GL13.GL_TEXTURE4)
+        GL11.glBindTexture(GL11.GL_TEXTURE_2D,terrain.textureMap.textureId)
+    }
     private fun unbindTexturedModel() {
         GL20.glDisableVertexAttribArray(0)
         GL20.glDisableVertexAttribArray(1)
