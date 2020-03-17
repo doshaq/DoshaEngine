@@ -71,7 +71,7 @@ fabric.properties
 .idea/caches/build_file_checksums.serout/
 
 .idea/
-
+out/
 target/
 
 *.log
